@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="utf-8">
+ <meta name = "viewpoint" content= "width=dvice-width,initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>DOM操作の基本</title>
+
+</head>
+<body>
+    <button id = "textChange">テキスト変更</button>
+    <h1>楽しいJavaScript</h1>
+    <p id="target">こんにちは、こんにちは、エブリバディ</p>
+    <p>こんにちは、こんにちは、エブリバディ</p>
+    <p>こんにちは、こんにちは、エブリバディ</p>
+
+<script>
+ 'use script';
+//  const textChange = () => {
+//      document.querySelector('h1').textContent = "Changed!";
+//      //document.querySelector('#target').textContent = "Changed!";
+//      //document.getElementById('target').textContent = "Changed!";
+//      //document.querySelector('p').textContent = "Changed!!!!!"; //　←一つ目のタグにしか影響しない。
+//      document.querySelectorAll('p')[2].textContent = "Changed!!!!!"; ←3番目のpタグのみ変更
+
+//  }
+//  setTimeout(textChange,1000);
+
+document.getElementById('textChange').addEventListener('click',() => {
+    document.getElementById('target').textContent = "Changed!!!"
+});
+
+ </script>
+
+</body>
+
+</html>

@@ -10,15 +10,71 @@
     <script>
         'use strict';
         
-        // アロー関数
+// アロー関数
 
-    const addTwonum = (x, y) => {
-        return x * y;
+    // const addTwonum = (x, y) => {
+    //     return x * y;
+    // }
+    // console.log(addTwonum(3, 4))
+    
+    
+// クラスとは
+
+    // class Calculator{
+    //     constructor (x, y) {
+    //         this.x = x;
+    //         this.y = y;
+    //     }
+    //     addTwoNum() {
+    //         return this.x + this.y;
+    //     }
+    // }
+    
+    // const CalcA = new Calculator(3,4); //インスタンス作成
+    // const CalcB = new Calculator(1,1); //インスタンス作成
+    // console.log(CalcA.addTwoNum());    // インスタンスが生成されたため、
+    // 　　　　　　　　　　　　　　　　 　　 //  ()で引数を書く必要がない
+    // console.log(CalcB.addTwoNum(2,5)); //　←インスタンス優先のため、結果は2が出力
+
+// クラスの継承
+
+    // class SuperNaming{
+    //     constructor () {
+    //     　this.name = "田中"
+    //     }
+    //     outputname() {
+    //         return this.name;
+    //     }
+    // }
+    // class SubGreeting extends SuperNaming{
+    //     outputname(){
+    //         return super.outputname() + "太郎";
+    //     }
+    //     outputHello(){
+    //         return "Hello!";
+    //     }
+    // }
+    
+    // const Greeting = new SubGreeting;
+    // console.log(Greeting.outputHello() + Greeting.outputname()); 
+
+// 練習問題
+// 
+    class Naming {
+        constructor(name) {
+            this.name = ["山田","田中","林",name]
+        }
+        result(i) {
+            return this.name[i];
+        }
     }
-    console.log(addTwonum(3, 4))
+    const outputName = new Naming("佐藤");
+    for(let i = 0; i < outputName.name.length ; i++){
+        console.log(outputName.result(i));
+    }
+
+
     </script>
-
-
 </body>
 
 </html>
